@@ -51,27 +51,31 @@ Data Dictionary:
 
 Techniques Used for overall analysis :
 
-- LOad and review data in pandas  using pd.read_csv()
-- Inspecting the dataframe by using describe(),checking dataframe's shape, separating out categorical and  continous variables,visualizng the target variable
-- Performing Exploratory Data Analysis before diving into model creation.
+LOad and review data in pandas  using pd.read_csv()Inspecting the dataframe by using describe(),checking dataframe's shape, separating out categorical and  continous variables,visualizng the target variable
+
+Performing Exploratory Data Analysis before diving into model creation.
+
 1) Performed univariate analysis of continous  and categorical variables.Created a function that returned histograms and box plots for visualizing the data.
 2) Perfomed bivariate analysis of continous and categorical variables
 3) Checked correalations between variables using heatmap.
      
-- Performed Pre-processing/Data manipulations:
+Performed Pre-processing/Data manipulations:
+
 1) Checked Duplicate values,NaN values
 2) Dropped columns that were not relevant for our analysis like Zipcode etc
 3) Used ID variable as index of Dataframe
 4) Checked and removed Outliers using IQR method.Outliers were  present for Mortgage,Income, CCAvg.
     
-- Performed Feature Engineering :
+Performed Feature Engineering :
+
 1) Created Bank_services variable by combining Online and credit card variable.
 2) Multicollinearity Check using VIF (variance_inflation_factor)
         - Dropped variables that were highly correlated with each other.
 3) Performed feature selection using RFE(Recursive Feature Elimination technique)
 4) Decided on our Evaluation Metric(Recall)
     
--Performed Data modelling for different classification models(Logistic, K-NN ,Decision Tree, Random Forest,Xgboost) to predict the likelihood of a liability customer in buying personal loans
+Performed Data modelling for different classification models(Logistic, K-NN ,Decision Tree, Random Forest,Xgboost) to predict the likelihood of a liability customer in buying personal loans
+
 1) Defined X(independent) and y(dependent) variables
 2) Split X and y using Train test split 70%train and 30% test.
 3) As our target variable was highly imbalanced. We balanced it using RandomOversampling technique.
@@ -81,9 +85,10 @@ Techniques Used for overall analysis :
 7) Produced confusion matrix, classification reports, AUC score, Cross val score for all the models. 
 8) Compared all the models based on the above scores.
     
-- Findings :
+Findings :
 
-- After runniing all the models successfully, we got the following results:
+After runniing all the models successfully, we got the following results:
+
 1) Random Forest gave us best Recall of 96%.
 2) Also, Type II(False Negative) errors are close to 2 in Random Forest model.
 3) The area in ROC curve for Random Forest is 0.99 which is close to 1 which suggests that Random Forest is the best model in comparision to other models.
@@ -91,7 +96,8 @@ Techniques Used for overall analysis :
 5) Therefore,Random Forest would be the best choice for predicting whether customer would be interested in taking personal loan or not.
       
       
-- Actionable Insights & Future Recommendations
+Actionable Insights & Future Recommendations:
+
 1) As we have observed that Income is most important Feature, which indicates that Income has a good effect on Personal Loan, Customers with High Income have more chances of having Personal Loan. So it is advised to Target Customers with high income
 2) CCAvg also show a good relationship with Personal Loan, which means customer who are spending more on credit cards can be targeted for Personal Loan
 3) Since CD account has good relation with Personal loan, customers having CD account can be targeted for personal loans
