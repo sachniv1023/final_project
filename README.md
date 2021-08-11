@@ -1,4 +1,4 @@
-# Personal Loan Campaign Modelling 
+# Personal Loan Campaign Modeling 
 
 Data Overview:
 
